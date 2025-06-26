@@ -82,6 +82,8 @@ body{
 }
 .categories p:hover{
     color: blueviolet;
+    transition-duration:2s;
+   cursor: pointer;
 }
 .cover__image img{
     width:100%;
@@ -96,10 +98,21 @@ body{
     position:absolute;
     top: 10%;
     left: 10px;
-    bottom: -2;
-    display: flex;
-    flex-wrap: wrap;
     padding: 2%;
+    animation-name: zoom;
+    animation-duration: 3s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+@keyframes zoom{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 .recommended{
     padding:10px;
